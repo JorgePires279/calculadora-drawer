@@ -18,10 +18,28 @@ export default function Calculadora({ display, onPressNumero, onPressOperador, o
       <View style={styles.linha}>
         <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('4')}>4</Button>
         <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('5')}>5</Button>
+        <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('6')}>6</Button>
       </View>
 
+      <View style={styles.linha}>
+        <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('7')}>7</Button>
+        <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('8')}>8</Button>
+        <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('9')}>9</Button>
+      </View>
 
+      <View style={styles.linha}>
+        <Button mode="contained" buttonColor="#1565C0" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressNumero('0')}>0</Button>
+        <Button mode="contained" buttonColor="#000000" style={styles.botao} labelStyle={styles.labelBotao} onPress={onPressLimpar}>C</Button>
+      </View>
 
+      <View style={styles.linha}>
+        <Button mode="contained" buttonColor="#000000" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressOperador('+')}>+</Button>
+        <Button mode="contained" buttonColor="#000000" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressOperador('-')}>-</Button>
+        <Button mode="contained" buttonColor="#000000" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressOperador('*')}>*</Button>
+        <Button mode="contained" buttonColor="#000000" style={styles.botao} labelStyle={styles.labelBotao} onPress={() => onPressOperador('/')}>/</Button>
+      </View>
+
+      <Button mode="contained" buttonColor="#000000" style={styles.botaoIgual} labelStyle={styles.labelBotao} onPress={onPressIgual}>=</Button>
 
     </View>
   );
@@ -57,6 +75,11 @@ const styles = StyleSheet.create({
   },
   botao: {
     flex: 1,
+    height: 65,
+    justifyContent: 'center',
+    borderRadius: 10,
+  },
+  botaoIgual: {
     height: 65,
     justifyContent: 'center',
     borderRadius: 10,
