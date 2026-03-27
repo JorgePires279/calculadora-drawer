@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Calculadora from './components/calculadora';
+import Calculadora from './components/calculadora.jsx';
 import Historico from './components/Historico.jsx';
 
 const Drawer = createDrawerNavigator();
